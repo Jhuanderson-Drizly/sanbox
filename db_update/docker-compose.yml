@@ -1,0 +1,16 @@
+version: '2'
+services:
+
+  drizly-db:
+    image: 652798529812.dkr.ecr.us-east-1.amazonaws.com/api-development-database
+    ports:
+      - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+  app: 
+    build: .
+    depends_on:
+        - drizly-db
+
