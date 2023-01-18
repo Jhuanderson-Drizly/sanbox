@@ -10,7 +10,7 @@ GEM
     oj (3.10.14)
     ougai (1.8.5)
       oj (~> 3.10)
-    rack (2.2.3)
+    rack (3.0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rspec (3.9.0)
